@@ -18,9 +18,9 @@ cc.Class({
     },
 
     onInput(word, index) {
-        const correctColorStr = this.correctColor.toCSS("#rrggbb");
+        const correctColor = this.correctColor.toCSS("#rrggbb");
         const correctWord = word.substring(0, index);
         const restWord = word.substring(index);
-        this.label.string = `<b><size=48><color=${correctColorStr}>${correctWord}</color></size></b>${restWord}`;
+        this.label.string = `<b><size=48><color=${correctColor}>${correctWord}</color></size></b>${restWord}`;
     },
 });

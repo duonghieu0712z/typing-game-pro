@@ -23,6 +23,7 @@ cc.Class({
     inputWord(ev) {
         if (this._indexWord === this._word.length && ev.keyCode === cc.macro.KEY.space) {
             this.generateWord();
+            return;
         }
 
         const char = this._word.toUpperCase()[this._indexWord];
@@ -35,7 +36,6 @@ cc.Class({
     generateWord() {
         this._word = randomWords();
         this._indexWord = 0;
-
         this.changeLabel();
     },
 
