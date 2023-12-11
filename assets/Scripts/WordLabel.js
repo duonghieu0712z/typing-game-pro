@@ -7,6 +7,7 @@ cc.Class({
     properties: {
         label: cc.RichText,
         correctColor: cc.Color.GREEN,
+        correctSize: 48,
     },
 
     editor: {
@@ -14,13 +15,14 @@ cc.Class({
     },
 
     onLoad() {
-        Emitter.instance.registerEvent(EventCode.CHANGE_LABEL, this.onInput.bind(this));
+        Emitter.instance.registerEvent(EventCode.CHANGE_LABEL, this.onTyping.bind(this));
     },
 
-    onInput(word, index) {
+    onTyping(word, index) {
         const correctColor = this.correctColor.toCSS("#rrggbb");
         const correctWord = word.substring(0, index);
         const restWord = word.substring(index);
-        this.label.string = `<b><size=48><color=${correctColor}>${correctWord}</color></size></b>${restWord}`;
+
+        this.label.string = `<b><size=${this.correctSize}><color=${correctColor}>${correctWord}</color></size></b>${restWord}`;
     },
 });
