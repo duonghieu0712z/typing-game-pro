@@ -23,11 +23,6 @@ cc.Class({
         this.textQuest.string = words;
     },
     onTextChange(){
-        if(this.inputText.string[this.inputText.string.length - 1] == " "){
-            this.createWords();
-            this.inputText.string = '';
-            this.inputText.blur();
-            this.inputText.focus();
-        }
+
     },
 });

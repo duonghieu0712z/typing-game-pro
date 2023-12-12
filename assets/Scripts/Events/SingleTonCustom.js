@@ -17,6 +17,11 @@ cc.Class({
     Emitter.instance = new Emitter();
     Emitter.instance.registerEvent("hello", this.onHello.bind(this));
     Emitter.instance.registerOnce("welcome", this.onWelcome.bind(this));
+    Emitter.instance.registerEvent('target-Moving', this.targetMove.bind(this))
+  },
+
+  targetMove(tar){
+    tar.node.x+=2;
   },
 
   onHello(msg) {
