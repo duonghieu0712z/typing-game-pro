@@ -232,7 +232,7 @@
     "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
-    "_N$fontFamily": "Monospace",
+    "_N$fontFamily": "Courier",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
     "_id": ""
@@ -245,7 +245,7 @@
     "asset": {
       "__uuid__": "340358f0-952f-4fac-88b2-d9f6b36ab16d"
     },
-    "fileId": "ad6w5shsNOVqlGOCWnfi1z",
+    "fileId": "a2xukWEdZPC7PwLmIHkyOb",
     "sync": false
   },
   {
@@ -334,7 +334,7 @@
     "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
-    "_N$fontFamily": "Monospace",
+    "_N$fontFamily": "Courier",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
     "_id": ""
@@ -347,7 +347,7 @@
     "asset": {
       "__uuid__": "340358f0-952f-4fac-88b2-d9f6b36ab16d"
     },
-    "fileId": "f1ubYhg0xB7KFuZ7VdkMOn",
+    "fileId": "acYshsuNNJPYILhxfm6/Uk",
     "sync": false
   },
   {
@@ -358,7 +358,7 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_fontFamily": "Monospace",
+    "_fontFamily": "Courier",
     "_isSystemFontUsed": true,
     "_N$string": "<color=#00ff00>Wo</c>rd",
     "_N$horizontalAlign": 0,
@@ -466,7 +466,7 @@
     "_batchAsBitmap": false,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
-    "_N$fontFamily": "Monospace",
+    "_N$fontFamily": "Courier",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
     "_id": ""
@@ -513,6 +513,7 @@
       "__id__": 1
     },
     "_enabled": true,
+    "hasSpaceEnd": true,
     "_words": "",
     "_nextWords": "",
     "_indexWord": 0,

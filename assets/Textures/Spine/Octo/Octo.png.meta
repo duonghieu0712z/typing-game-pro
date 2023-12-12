@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "98752b96-0ba8-4aca-8a40-cb6b8e3c5b86",
+  "uuid": "7eae4e41-a57f-4996-9539-8a9dd54c01a8",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "Octo": {
       "ver": "1.0.4",
-      "uuid": "76c54dd3-94e7-43bd-9296-3d829291e926",
-      "rawTextureUuid": "98752b96-0ba8-4aca-8a40-cb6b8e3c5b86",
+      "uuid": "c778912e-40e1-4fbe-b1a8-cc217aca48b9",
+      "rawTextureUuid": "7eae4e41-a57f-4996-9539-8a9dd54c01a8",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
