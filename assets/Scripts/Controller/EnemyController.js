@@ -11,29 +11,32 @@ const Emitter = require("EventEmitter");
 cc.Class({
   extends: cc.Component,
 
-  properties: {},
-
-  onLoad() {
-    Emitter.instance = new Emitter();
-    Emitter.instance.registerEvent("hello", this.onHello.bind(this));
-    Emitter.instance.registerOnce("welcome", this.onWelcome.bind(this));
-    Emitter.instance.registerEvent('target-Moving', this.targetMove.bind(this))
-    Emitter.instance.registerEvent('target-Die', this.targetDie.bind(this))
+  properties: {
+    spine: sp.Skeleton,
+    speed: 100,
+    boxCol:cc.PhysicsBoxCollider,
   },
 
-  targetDie(){
+  start() {},
 
+  moving(target) {
+    cc.tween(this.node)
+      .to(5, { position: cc.v2(target.x - 100, this.node.y) })
+      .start();
+
+      if (this.node.position.sub(target.position).mag() <= 100) {
+        this.attack();
+      }
   },
 
-  targetMove(tar){
-    tar.node.x+=2;
+  attack() {
+    this.spine.setAnimation(0, "Attack_1", 0);
+    this.spine.setCompleteListener(() => {
+      cc.log("player die");
+    });
   },
 
-  onHello(msg) {
-    cc.log(`hello ${msg}`);
-  },
-
-  onWelcome(msg) {
-    cc.log(`welcome ${msg}`);
-  },
+  onCollisionEnter(collider){
+    cc.log(collider);
+  }
 });

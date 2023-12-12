@@ -10,24 +10,32 @@
 const Emitter = require('EventEmitter');
 cc.Class({
   extends: cc.Component,
-
   properties: {
     spine: sp.Skeleton,
-    target: cc.Node,
+    checkRun: false,
+    boxCol:cc.PhysicsBoxCollider,
   },
 
   start() {
-    cc.tween(this.node)
-      .to(10, { position: cc.v2(this.target.x - 100, this.node.y) })
-      .call(() => {
-        this.attack();
-      })
-      .start();
+    this.spine.setAnimation(0, "portal", 0);
+    this.spine.setCompleteListener(() => {
+      this.spine.setAnimation(0, "idle", 1);
+    });
+    // this.spine.setAnimation(0, 'shoot', 1);
+    // this.spine.setAnimation(1, 'hoverboard', 1);
   },
-
-  attack(){
-    this.spine.setAnimation(0, "Attack_1", 0);
-    this.spine.setCompleteListener(()=>{
-    })
-  }
+  moving() {
+    if (!this.checkRun) {
+      this.checkRun = true;
+      this.spine.setAnimation(0, "run", 0);
+      this.spine.setCompleteListener(() => {
+        this.spine.setAnimation(0, "idle", 1);
+        this.checkRun = false;
+      });
+    }
+    this.node.x += 15;
+  },
+  die(){
+    this.spine.setAnimation(0, 'die', 0);
+  },
 });
