@@ -30,6 +30,7 @@ cc.Class({
             this._indexWord++;
 
             Emitter.instance.emit(EventCode.RENDER_WORDS, this._words, this._indexWord);
+            Emitter.instance.emit(EventCode.PLAYER_MOVING);
         }
 
         const isPressedSpace = !this.hasSpaceEnd || ev.keyCode === cc.macro.KEY.space;
