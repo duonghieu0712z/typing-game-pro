@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "WordLabel",
+    "_name": "WordsLabel",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -81,7 +81,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "CurrentWords",
+    "_name": "Words",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -115,7 +115,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 72.02,
-      "height": 63
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -125,7 +125,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 30,
+      "y": 25,
       "z": 0
     },
     "_scale": {
@@ -175,7 +175,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 36.01,
-      "height": 63
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -185,7 +185,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": -36.01,
-      "y": -31.5,
+      "y": -25.2,
       "z": 0
     },
     "_scale": {
@@ -224,7 +224,7 @@
     "_string": "Wo",
     "_N$string": "Wo",
     "_fontSize": 30,
-    "_lineHeight": 50,
+    "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -232,7 +232,7 @@
     "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
-    "_N$fontFamily": "Monospace",
+    "_N$fontFamily": "Courier",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
     "_id": ""
@@ -243,9 +243,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "340358f0-952f-4fac-88b2-d9f6b36ab16d"
+      "__uuid__": "bd02456c-6416-4390-a561-f35c0c924fc1"
     },
-    "fileId": "a8cfRkAhhMhZiDSeOogEYg",
+    "fileId": "1aon2ut3FC355VhyTJXW1e",
     "sync": false
   },
   {
@@ -277,7 +277,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 36.01,
-      "height": 63
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -287,7 +287,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -31.5,
+      "y": -25.2,
       "z": 0
     },
     "_scale": {
@@ -326,7 +326,7 @@
     "_string": "rd",
     "_N$string": "rd",
     "_fontSize": 30,
-    "_lineHeight": 50,
+    "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -334,7 +334,7 @@
     "_batchAsBitmap": false,
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
-    "_N$fontFamily": "Monospace",
+    "_N$fontFamily": "Courier",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
     "_id": ""
@@ -345,9 +345,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "340358f0-952f-4fac-88b2-d9f6b36ab16d"
+      "__uuid__": "bd02456c-6416-4390-a561-f35c0c924fc1"
     },
-    "fileId": "58C41llSJOapGOhdvadwdN",
+    "fileId": "98YpsYjaZLDaIkoX+9sVJf",
     "sync": false
   },
   {
@@ -358,14 +358,14 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_fontFamily": "Monospace",
+    "_fontFamily": "Courier",
     "_isSystemFontUsed": true,
-    "_N$string": "<color=#00ff00>Wo</c>rd",
+    "_N$string": "<color=#00ff00>Wo</color>rd",
     "_N$horizontalAlign": 0,
     "_N$fontSize": 30,
     "_N$font": null,
     "_N$maxWidth": 0,
-    "_N$lineHeight": 50,
+    "_N$lineHeight": 40,
     "_N$imageAtlas": null,
     "_N$handleTouchEvent": true,
     "_id": ""
@@ -376,9 +376,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "340358f0-952f-4fac-88b2-d9f6b36ab16d"
+      "__uuid__": "bd02456c-6416-4390-a561-f35c0c924fc1"
     },
-    "fileId": "4dJcCMPeVIILl9XToTaSO+",
+    "fileId": "56iTjsFbZDKLDoaZC5F4JO",
     "sync": false
   },
   {
@@ -466,7 +466,7 @@
     "_batchAsBitmap": false,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
-    "_N$fontFamily": "Monospace",
+    "_N$fontFamily": "Courier",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
     "_id": ""
@@ -477,26 +477,13 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "340358f0-952f-4fac-88b2-d9f6b36ab16d"
+      "__uuid__": "bd02456c-6416-4390-a561-f35c0c924fc1"
     },
-    "fileId": "1e7KGJ8rlBvLxY7TXZjs7D",
+    "fileId": "91LC1xXZJDAaiOLf5jhLLc",
     "sync": false
   },
   {
-    "__type__": "5e773fY+iBMk7jEa4985SX6",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "_words": "",
-    "_nextWords": "",
-    "_indexWord": 0,
-    "_id": ""
-  },
-  {
-    "__type__": "fb1f3ECd65PF7DyJaj3MNpm",
+    "__type__": "968443J5m5G8obWbeYAkCio",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -519,14 +506,28 @@
     "_id": ""
   },
   {
+    "__type__": "0fecaAw8IpCZLEn0tmbfgB1",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "hasSpaceEnd": true,
+    "_words": "",
+    "_nextWords": "",
+    "_indexWord": 0,
+    "_id": ""
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "340358f0-952f-4fac-88b2-d9f6b36ab16d"
+      "__uuid__": "bd02456c-6416-4390-a561-f35c0c924fc1"
     },
-    "fileId": "edZzRC8DlIwJUhKAD7ELFh",
+    "fileId": "a57Is2qn9IEoU8H792Tz9n",
     "sync": false
   }
 ]

@@ -23,7 +23,10 @@ cc.Class({
         const currentChar = index === words.length ? "" : words[index];
         const restWord = words.substring(index + 1);
 
-        this.words.string = `<b><size=${correctSize}><color=${correctColor}>${correctWord}</color></size></b><u>${currentChar}</u>${restWord}`;
+        this.words.string =
+            `<b><size=${correctSize}><color=${correctColor}>${correctWord}</color></size></b>` +
+            `<u>${currentChar}</u>` +
+            `${restWord}`;
     },
 
     renderNextWords(words) {
