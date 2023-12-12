@@ -115,7 +115,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 72.02,
-      "height": 63
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -125,7 +125,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 30,
+      "y": 25,
       "z": 0
     },
     "_scale": {
@@ -175,7 +175,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 36.01,
-      "height": 63
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -185,7 +185,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": -36.01,
-      "y": -31.5,
+      "y": -25.2,
       "z": 0
     },
     "_scale": {
@@ -224,7 +224,7 @@
     "_string": "Wo",
     "_N$string": "Wo",
     "_fontSize": 30,
-    "_lineHeight": 50,
+    "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -245,7 +245,7 @@
     "asset": {
       "__uuid__": "340358f0-952f-4fac-88b2-d9f6b36ab16d"
     },
-    "fileId": "b2U8GTivpC8r6gPT13NAAJ",
+    "fileId": "f2SLSMEzFGDLuqgVDUpt0m",
     "sync": false
   },
   {
@@ -277,7 +277,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 36.01,
-      "height": 63
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -287,7 +287,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -31.5,
+      "y": -25.2,
       "z": 0
     },
     "_scale": {
@@ -326,7 +326,7 @@
     "_string": "rd",
     "_N$string": "rd",
     "_fontSize": 30,
-    "_lineHeight": 50,
+    "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -347,7 +347,7 @@
     "asset": {
       "__uuid__": "340358f0-952f-4fac-88b2-d9f6b36ab16d"
     },
-    "fileId": "b8hCO4QbhPKKend3kDH30Q",
+    "fileId": "44qiI9JqlCW4dD0W4hQu15",
     "sync": false
   },
   {
@@ -361,11 +361,11 @@
     "_fontFamily": "Courier",
     "_isSystemFontUsed": true,
     "_N$string": "<color=#00ff00>Wo</c>rd",
-    "_N$horizontalAlign": 0,
+    "_N$horizontalAlign": 1,
     "_N$fontSize": 30,
     "_N$font": null,
     "_N$maxWidth": 0,
-    "_N$lineHeight": 50,
+    "_N$lineHeight": 40,
     "_N$imageAtlas": null,
     "_N$handleTouchEvent": true,
     "_id": ""
