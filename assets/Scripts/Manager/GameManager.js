@@ -7,22 +7,22 @@
 // Learn life-cycle callbacks:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-const randomWords = require('random-words');
+
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        textQuest:cc.Label,
-        inputText:cc.EditBox,
+        player:cc.Node,
+        enemy:cc.Node,
     },
+
+    // LIFE-CYCLE CALLBACKS:
+
+    // onLoad () {},
+
     start () {
-        this.createWords();
-    },
-    createWords(){
-        const words = randomWords(1).join('');
-        this.textQuest.string = words;
-    },
-    onTextChange(){
 
     },
+
+    // update (dt) {},
 });

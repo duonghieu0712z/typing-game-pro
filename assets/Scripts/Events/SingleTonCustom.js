@@ -18,6 +18,11 @@ cc.Class({
     Emitter.instance.registerEvent("hello", this.onHello.bind(this));
     Emitter.instance.registerOnce("welcome", this.onWelcome.bind(this));
     Emitter.instance.registerEvent('target-Moving', this.targetMove.bind(this))
+    Emitter.instance.registerEvent('target-Die', this.targetDie.bind(this))
+  },
+
+  targetDie(){
+
   },
 
   targetMove(tar){
