@@ -12,17 +12,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        player:cc.Node,
-        enemy:cc.Node,
+        userName:cc.Label,
+        avatar:cc.Sprite,
     },
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
-    start () {
-
-    },
-
-    // update (dt) {},
 });

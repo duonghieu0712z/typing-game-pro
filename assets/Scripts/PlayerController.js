@@ -7,7 +7,7 @@
 // Learn life-cycle callbacks:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
+const Emitter = require('EventEmitter');
 cc.Class({
   extends: cc.Component,
   properties: {
@@ -24,17 +24,17 @@ cc.Class({
     // this.spine.setAnimation(1, 'hoverboard', 1);
   },
   moving() {
-    if (!this.checkRun) {
-      this.checkRun = true;
-      this.spine.setAnimation(0, "run", 0);
-      this.spine.setCompleteListener(() => {
-        this.spine.setAnimation(0, "idle", 1);
-        this.checkRun = false;
-      });
-    }
+    // if (!this.checkRun) {
+    //   this.checkRun = true;
+    //   this.spine.setAnimation(0, "run", 0);
+    //   this.spine.setCompleteListener(() => {
+    //     this.spine.setAnimation(0, "idle", 1);
+    //     this.checkRun = false;
+    //   });
+    // }
+    Emitter.instance.emit('target-Moving', this);
   },
   die(){
     this.spine.setAnimation(0, 'die', 0);
   },
-//   jump(){}
 });

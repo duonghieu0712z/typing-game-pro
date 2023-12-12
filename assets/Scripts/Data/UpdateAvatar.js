@@ -9,20 +9,14 @@
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
 cc.Class({
-    extends: cc.Component,
-
-    properties: {
-        player:cc.Node,
-        enemy:cc.Node,
-    },
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
-    start () {
-
-    },
-
-    // update (dt) {},
+  extends: cc.Component,
+  properties: {
+    avatar:cc.Sprite,
+  },
+  setAvatar(img){
+    this.avatar.spriteFrame = img;
+  },
+  onClick(){
+    cc.log(this.avatar.spriteFrame)
+  }
 });
