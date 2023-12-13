@@ -9,30 +9,30 @@
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
 const Emitter = require("EventEmitter");
+const EventCode = require("EventCode");
 
 cc.Class({
-  extends: cc.Component,
+    extends: cc.Component,
 
-  properties: {
-    inputText: cc.EditBox,
-    avatar: cc.Sprite,
-  },
-  start() {
-    cc.log(cc.director)
-  },
-  onLoad() {
-    Emitter.instance.registerEvent(
-      "hi",
-      ((img) => {
-        this.avatar.spriteFrame = img;
-      }).bind(this)
-    );
-  },
-  ChangeScene() {
-    const data = {
-      userName: this.inputText.string,
-      img: this.avatar.spriteFrame,
-    };
-    cc.director.loadScene("Main");
-  },
+    properties: {
+        inputText: cc.EditBox,
+        avatar: cc.Sprite,
+    },
+
+    onLoad() {
+        Emitter.instance.registerEvent(EventCode.CHOOSE_AVATAR, (img) => {
+            this.avatar.spriteFrame = img;
+        });
+    },
+
+    ChangeScene() {
+        const info = {
+            userName: this.inputText.string,
+            img: this.avatar.spriteFrame,
+        };
+
+        cc.director.loadScene("Main", (err, data) => {
+            Emitter.instance.emit(EventCode.LOAD_INFO, info);
+        });
+    },
 });
