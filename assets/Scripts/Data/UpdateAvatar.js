@@ -9,15 +9,17 @@
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
 const Emitter = require("EventEmitter");
+const EventCode = require("EventCode");
+
 cc.Class({
-  extends: cc.Component,
-  properties: {
-    avatar: cc.Sprite,
-  },
-  setAvatar(img) {
-    this.avatar.spriteFrame = img;
-  },
-  onClick() {
-    Emitter.instance.emit('hi', this.avatar.spriteFrame)
-  },
+    extends: cc.Component,
+    properties: {
+        avatar: cc.Sprite,
+    },
+    setAvatar(img) {
+        this.avatar.spriteFrame = img;
+    },
+    onClick() {
+        Emitter.instance.emit(EventCode.CHOOSE_AVATAR, this.avatar.spriteFrame);
+    },
 });
