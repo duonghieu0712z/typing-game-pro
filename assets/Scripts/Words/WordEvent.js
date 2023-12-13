@@ -7,6 +7,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        numberWords: 1,
         hasSpaceEnd: true,
 
         _words: "",
@@ -41,7 +42,7 @@ cc.Class({
     },
 
     generateNextWords() {
-        this._nextWords = randomWords();
+        this._nextWords = randomWords({ exactly: this.numberWords, join: " " });
         if (this.hasSpaceEnd) {
             this._nextWords += " ";
         }
