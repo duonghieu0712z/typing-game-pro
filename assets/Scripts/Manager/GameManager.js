@@ -7,6 +7,14 @@ cc.Class({
   properties: {
     player: cc.Node,
     enemy: cc.Node,
+    mAudio: {
+      default: null,
+      type: cc.AudioClip
+  }
+  },
+
+  start(){
+    Emitter.instance.emit(EventCode.PLAY_SOUND, this.mAudio);
   },
   onLoad() {
     Emitter.instance.registerEvent(
