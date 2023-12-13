@@ -16,6 +16,10 @@ cc.Class({
     spine: sp.Skeleton,
     checkRun: false,
     speed:15,
+    playerDieClip:{
+      type:cc.AudioClip,
+      default:null
+    },
   },
   onLoad(){
     Emitter.instance.registerOnce(EventCode.PLAYER_DIE, this.die.bind(this));
@@ -35,5 +39,6 @@ cc.Class({
     this.spine.setAnimation(0, "death", 0);
     this.speed = 0;
     Emitter.instance.emit(EventCode.LOSE);
+    Emitter.instance.emit(EventCode.PLAY_SOUND, this.playerDieClip);
   },
 });
