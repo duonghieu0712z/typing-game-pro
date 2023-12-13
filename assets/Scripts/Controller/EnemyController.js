@@ -14,7 +14,6 @@ cc.Class({
   properties: {
     spine: sp.Skeleton,
     speed: 100,
-    boxCol:cc.PhysicsBoxCollider,
   },
 
   start() {},

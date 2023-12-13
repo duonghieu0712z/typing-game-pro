@@ -8,11 +8,31 @@
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
-cc.Class({
-    extends: cc.Component,
+const Emitter = require("EventEmitter");
 
-    properties: {
-        userName:cc.Label,
-        avatar:cc.Sprite,
-    },
+cc.Class({
+  extends: cc.Component,
+
+  properties: {
+    inputText: cc.EditBox,
+    avatar: cc.Sprite,
+  },
+  start() {
+    cc.log(cc.director)
+  },
+  onLoad() {
+    Emitter.instance.registerEvent(
+      "hi",
+      ((img) => {
+        this.avatar.spriteFrame = img;
+      }).bind(this)
+    );
+  },
+  ChangeScene() {
+    const data = {
+      userName: this.inputText.string,
+      img: this.avatar.spriteFrame,
+    };
+    cc.director.loadScene("Main");
+  },
 });
