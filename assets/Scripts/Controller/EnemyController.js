@@ -8,34 +8,32 @@
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 const Emitter = require("EventEmitter");
+const EventCode = require("EventCode");
 cc.Class({
   extends: cc.Component,
 
   properties: {
     spine: sp.Skeleton,
-    speed: 100,
+    speed: 2,
+    isAttack:false,
   },
 
-  start() {},
-
   moving(target) {
+    const s = Math.abs(target.x - this.node.x);
     cc.tween(this.node)
-      .to(5, { position: cc.v2(target.x - 100, this.node.y) })
+      .to(s/this.speed, { position: cc.v2(target.x, this.node.y) })
       .start();
-
-      if (this.node.position.sub(target.position).mag() <= 100) {
-        this.attack();
-      }
+      cc.log(s);
+    if(s <= 100 && !this.isAttack){
+      this.attack();
+      this.isAttack = true;
+    }
   },
 
   attack() {
     this.spine.setAnimation(0, "Attack_1", 0);
     this.spine.setCompleteListener(() => {
-      cc.log("player die");
+      Emitter.instance.emit(EventCode.PLAYER_DIE);
     });
   },
-
-  onCollisionEnter(collider){
-    cc.log(collider);
-  }
 });

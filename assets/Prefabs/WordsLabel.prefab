@@ -312,7 +312,7 @@
     "asset": {
       "__uuid__": "bd02456c-6416-4390-a561-f35c0c924fc1"
     },
-    "fileId": "eaC1YbVO9A/4ipwF5Fm+L5",
+    "fileId": "c6x00VwrlBW7b83OY1KFHc",
     "sync": false
   },
   {
@@ -414,7 +414,7 @@
     "asset": {
       "__uuid__": "bd02456c-6416-4390-a561-f35c0c924fc1"
     },
-    "fileId": "6aJY03ltNKTL+wfco1S7Lg",
+    "fileId": "9cJo4XITpBH4Q2+56hnTt5",
     "sync": false
   },
   {
@@ -428,7 +428,7 @@
     "_fontFamily": "Courier",
     "_isSystemFontUsed": true,
     "_N$string": "<color=#00ff00>Wo</color>rd",
-    "_N$horizontalAlign": 0,
+    "_N$horizontalAlign": 1,
     "_N$fontSize": 30,
     "_N$font": null,
     "_N$maxWidth": 0,
