@@ -5,6 +5,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        background: cc.Layout,
         words: cc.RichText,
         nextWords: cc.Label,
         correctColor: cc.Color.GREEN,
@@ -13,6 +14,13 @@ cc.Class({
     onLoad() {
         Emitter.instance.registerEvent(EventCode.RENDER_WORDS, this.renderWords.bind(this));
         Emitter.instance.registerEvent(EventCode.RENDER_NEXT_WORDS, this.renderNextWords.bind(this));
+    },
+
+    start() {
+        const hasSpaceEnd = this.getComponent("WordEvent").hasSpaceEnd;
+        if (!hasSpaceEnd) {
+            this.background.paddingRight = 18;
+        }
     },
 
     renderWords(words, index) {
