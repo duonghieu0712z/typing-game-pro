@@ -26,6 +26,10 @@ cc.Class({
     },
 
     onTyping(ev) {
+        if (ev.keyCode >= cc.macro.KEY.a && ev.keyCode <= cc.macro.KEY.z) {
+            Emitter.instance.emit(EventCode.ENEMY_MOVING);
+        }
+
         const char = this._words.toUpperCase()[this._indexWord];
         if (char.charCodeAt(0) === ev.keyCode) {
             this._indexWord++;

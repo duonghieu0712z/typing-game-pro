@@ -32,7 +32,6 @@ cc.Class({
     this.node.x += this.speed;
   },
   die() {
-    cc.log(this.spine)
     this.spine.setAnimation(0, "death", 0);
     this.speed = 0;
     Emitter.instance.emit(EventCode.LOSE);
