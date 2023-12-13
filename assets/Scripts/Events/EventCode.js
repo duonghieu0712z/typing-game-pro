@@ -6,6 +6,8 @@ const EventCode = {
     RENDER_NEXT_WORDS: "render-next-words",
     PLAYER_MOVING: "player-move",
     ENEMY_MOVING: "enemy-move",
+    PLAYER_DIE:'player-die',
+    LOSE:"lose",
 };
 
 module.exports = EventCode;
