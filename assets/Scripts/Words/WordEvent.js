@@ -13,6 +13,7 @@ cc.Class({
         _words: "",
         _nextWords: "",
         _indexWord: 0,
+
     },
 
     onLoad() {
@@ -29,7 +30,6 @@ cc.Class({
         const char = this._words.toUpperCase()[this._indexWord];
         if (char.charCodeAt(0) === ev.keyCode) {
             this._indexWord++;
-
             Emitter.instance.emit(EventCode.RENDER_WORDS, this._words, this._indexWord);
             Emitter.instance.emit(EventCode.PLAYER_MOVING);
             Emitter.instance.emit(EventCode.ENEMY_MOVING);

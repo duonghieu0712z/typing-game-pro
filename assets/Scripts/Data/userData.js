@@ -17,6 +17,7 @@ cc.Class({
     properties: {
         inputText: cc.EditBox,
         avatar: cc.Sprite,
+        validInput:cc.Label,
     },
 
     onLoad() {
@@ -26,13 +27,18 @@ cc.Class({
     },
 
     ChangeScene() {
-        const info = {
-            userName: this.inputText.string,
-            img: this.avatar.spriteFrame,
-        };
-
-        cc.director.loadScene("Main", (err, data) => {
-            Emitter.instance.emit(EventCode.LOAD_INFO, info);
-        });
+        if(this.inputText.string.trim() != "" && this.avatar.spriteFrame != null){
+            const info = {
+                userName: this.inputText.string,
+                img: this.avatar.spriteFrame,
+            };
+    
+            cc.director.loadScene("Main", (err, data) => {
+                Emitter.instance.emit(EventCode.LOAD_INFO, info);
+            });
+        }
+        else{
+            this.validInput.node.opacity = 255;
+        }
     },
 });
