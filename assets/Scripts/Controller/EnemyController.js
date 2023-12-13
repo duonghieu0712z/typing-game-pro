@@ -15,7 +15,7 @@ cc.Class({
   },
 
   moving(target) {
-    this.spine.setAnimation(0, "Walk", 0);
+    this.spine.setAnimation(0, "Walk", 1);
     const action = cc
       .spawn(
         cc.callFunc(() => this.moveAction(target)),
